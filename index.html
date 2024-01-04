@@ -1,1 +1,42 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #dynamicButton {
+            padding: 50px 100px;
+            font-size: 16px;
+            color: white;
+            background-color: #4CAF50; /* 美化后的颜色，可以根据需求调整 */
+            border: none;
+            border-radius: 25px; /* 圆角 */
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        #dynamicButton:hover {
+            background-color: #45a049; /* 鼠标悬停时的颜色，可以根据需求调整 */
+            transform: scale(2.1);
+        }
+    </style>
+</head>
+<body>
+    <button id="dynamicButton" onclick="redirectToBing()">点击进入</button>
+
+    <script>
+        function redirectToBing() {
+            window.location.href = 'http://192.168.31.211:9990/';
+        }
+    </script>
+</body>
+</html>
