@@ -745,17 +745,24 @@
 				key: "initAudio",
 				value: function() {
 					var t = new Audio;
-					t.src = i(18), t.loop = !0, t.play(),
-						t.volume = .5, document.querySelector(
-							"#music")
-						.onclick = function() {
-							"on" == this.getAttribute(
-								"class") ? (this.setAttribute(
-									"class", "off"),
-								t.pause()) : (this.setAttribute(
-									"class", "on"),
-								t.play())
-						}
+					t.src = i(18), t.loop = !0, 
+					t.volume = .5, 
+					t.play();
+						
+					document.addEventListener('click', function(event) {
+						t.play();
+					});
+
+					document.querySelector(
+						"#music")
+					.onclick = function() {
+						"on" == this.getAttribute(
+							"class") ? (this.setAttribute(
+								"class", "off"),
+							t.pause()) : (this.setAttribute(
+								"class", "on"),
+							t.play())
+					}
 				}
 			}, {
 				key: "initProperty",
